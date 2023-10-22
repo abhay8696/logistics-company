@@ -1,4 +1,5 @@
 .navbar{
+    position: absolute;
     padding: 0 2rem;
     display: flex;
     align-items: center;
@@ -6,7 +7,7 @@
     width: 100%;
     height: 100px;
     background-color: #fff;
-    z-index: 5;
+    z-index: 2;
 }
 
 .logo{
@@ -58,25 +59,38 @@
     right: 0;
     display: none;
     flex-direction: column;
-    z-index: -1;
-}
-.menuOFF{
-    transform: translateY(-100%);
-}
-.menuUP{
-    transform: translateY(-100%);
-    animation: slideUp 500ms forwards;
-}
-.menuDown{
-    transform: translateY(0);
-    animation: slideDown 500ms forwards;
+    z-index: 1;
 }
 .menuLink{
     color: #746a6a;
     cursor: pointer;
-    margin: 0 2rem;
-    padding: 1rem 1rem;
+    /* margin: 0 2rem; */
+    padding: 1rem 2rem;
     border-bottom: 1px solid #746a6a21;
+    /* transform: translateX(100%); */
+}
+.menuOFF{
+    transform: translateX(100%);
+}
+.menuRight{
+    transform: translateX(0%);
+    animation: slideRight 300ms forwards;
+}
+.menuCentre{
+    transform: translateX(100%);
+    animation: slideCenter 300ms forwards;
+}
+.menuLink2{
+    animation-delay: 100ms;
+}
+.menuLink3{
+    animation-delay: 150ms;
+}
+.menuLink4{
+    animation-delay: 200ms;
+}
+.menuLink{
+    background-color: rgba(255, 255, 255, 0.87);
 }
 .menuLink:hover{
     background-color: rgb(218, 215, 215);
@@ -94,19 +108,19 @@
     }
 }
 
-@keyframes slideDown {
+@keyframes slideCenter {
     from{
-        transform: translateY(-100%);
+        transform: translateX(100%);
     }
     to{
-        transform: translateY(0%);
+        transform: translateX(0);
     }
 }
-@keyframes slideUp {
+@keyframes slideRight {
     from{
-        transform: translateY(0%);
+        transform: translateX(0);
     }
     to{
-        transform: translateY(-100%);
+        transform: translateX(100%);
     }
 }

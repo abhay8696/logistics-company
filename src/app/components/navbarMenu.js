@@ -15,7 +15,7 @@ const NavbarMenu = () => {
     const [menuPosition, setMenuPosition] = useState("menuOFF");
 
     const handleClick = ()=>{
-        setMenuPosition(pre=> pre === "menuDown" ? "menuUP" : "menuDown");
+        setMenuPosition(pre=> pre === "menuCentre" ? "menuRight" : "menuCentre");
     }
     return (
         <>
@@ -27,11 +27,11 @@ const NavbarMenu = () => {
             onClick={handleClick}
             />
         </section>
-        <section className={`menuItems ${prompt.className} ${menuPosition}`}>
-            <Link href="/" className='menuLink'>Home</Link>
-            <Link href="/about"  className='menuLink'>About</Link>
-            <Link href="/careers"  className='menuLink'>Careers</Link>
-            <Link href="/contact"  className='menuLink'>Contact</Link>
+        <section className={`menuItems ${prompt.className}`}>
+            <Link href="/" className={`menuLink menuLink1  ${menuPosition}`}>Home</Link>
+            <Link href="/about"  className={`menuLink menuLink2  ${menuPosition}`}>About</Link>
+            <Link href="/careers"  className={`menuLink menuLink3  ${menuPosition}`}>Careers</Link>
+            <Link href="/contact"  className={`menuLink menuLink4  ${menuPosition}`}>Contact</Link>
         </section>
         </>
     );
