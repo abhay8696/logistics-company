@@ -1,0 +1,111 @@
+.navbar{
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    max-width: 50px;
+}
+.logoText{
+    margin-left: 0.5rem;
+    color: rgb(63, 58, 58);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+.navbarItems{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+.menuButton{
+    display: none;
+    /* padding: 1rem 2rem; */
+    cursor: pointer;
+    font-size: 1rem;
+}
+.menuButton img{
+    max-width: 50px;
+}
+.navbarLink{
+    padding: 0 3rem;
+    color: #746a6a;
+    cursor: pointer;
+    height: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+.navbarLink:hover{
+    background-color: rgb(218, 215, 215);
+    height: 100%;
+}
+.menuItems{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    z-index: -1;
+}
+.menuOFF{
+    transform: translateY(-100%);
+}
+.menuUP{
+    transform: translateY(-100%);
+    animation: slideUp 500ms forwards;
+}
+.menuDown{
+    transform: translateY(0);
+    animation: slideDown 500ms forwards;
+}
+.menuLink{
+    color: #746a6a;
+    cursor: pointer;
+    margin: 0 2rem;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #746a6a21;
+}
+.menuLink:hover{
+    background-color: rgb(218, 215, 215);
+}
+
+@media only screen and (max-width: 900px){
+    .navbarLink{
+        display: none;
+    }
+    .menuButton{
+        display: inline;
+    }
+    .menuItems{
+        display: flex;
+    }
+}
+
+@keyframes slideDown {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@keyframes slideUp {
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
