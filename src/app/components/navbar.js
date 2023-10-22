@@ -1,8 +1,8 @@
-"use client";
-
-import React, { useState } from 'react';
-import Image from 'next/image'
+import React from 'react';
 import { Roboto, Prompt } from 'next/font/google';
+import Link from 'next/link';
+import '../styles/navbar.css';
+import NavbarMenu from './navbarMenu';
 
 
 const heebo = Roboto({
@@ -15,11 +15,6 @@ const prompt = Prompt({
 })
 
 const Navbar = () => {
-    const [menuPosition, setMenuPosition] = useState("menuOFF");
-
-    const handleClick = ()=>{
-        setMenuPosition(pre=> pre === "menuDown" ? "menuUP" : "menuDown");
-    }
 
     return (
         <nav className='navbar'>
@@ -32,25 +27,12 @@ const Navbar = () => {
                 <span className={`logoText ${heebo.className}`}>Asiatico Logistics</span>
             </span>
             <section className={`navbarItems ${prompt.className}`}>
-                <span className='navbarLink'>Home</span>
-                <span className='navbarLink'>About</span>
-                <span className='navbarLink'>Careers</span>
-                <span className='navbarLink'>Contact</span>
+                <Link href="/" className='navbarLink'>Home</Link>
+                <Link href="/about"  className='navbarLink'>About</Link>
+                <Link href="/careers"  className='navbarLink'>Careers</Link>
+                <Link href="/contact"  className='navbarLink'>Contact</Link>
             </section>
-            <section className='menuButton'>
-                <img
-                src="/menu-grey.svg"
-                alt="menu button"
-                className={"styles.vercelLogo"}
-                onClick={handleClick}
-                />
-            </section>
-            <section className={`menuItems ${prompt.className} ${menuPosition}`}>
-                <span className='menuLink'>Home</span>
-                <span className='menuLink'>About</span>
-                <span className='menuLink'>Careers</span>
-                <span className='menuLink'>Contact</span>
-            </section>
+            <NavbarMenu />
         </nav>
     );
 };

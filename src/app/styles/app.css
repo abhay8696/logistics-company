@@ -1,0 +1,68 @@
+.site-header{
+    /* height: 500px; */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%), url("/truckLanding.jpg"); */
+    height: calc(100vh - 100px);
+    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/truckLanding.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+}
+
+.site-header h1{
+    font-size: 5rem;
+}
+.site-header p{
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+.site-header-actions{
+    margin-top: 1rem;
+}
+.site-header-buttons{
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+.headerButton1{
+    border: 1px solid #d44545;
+    background-color: #d44545;
+}
+.headerButton2{
+    border: 1px solid #eb954b;
+    background-color: #eb954b;
+    /* color: #4f5d73; */
+}
+@media only screen and (max-width: 900px){
+    .site-header{
+        background: linear-gradient(to top,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/truckLanding.jpg");
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .site-header h1{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 500px){
+    .site-header{
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+
+
