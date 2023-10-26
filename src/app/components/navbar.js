@@ -28,8 +28,8 @@ const Navbar = () => {
             </span>
             <section className={`navbarItems ${prompt.className}`}>
                 <Link href="/" className='navbarLink'>Home</Link>
-                <Link href="/about"  className='navbarLink'>About</Link>
-                <Link href="/careers"  className='navbarLink'>Careers</Link>
+                <Link href="/services"  className='navbarLink'>Service</Link>
+                <Link href="/aboutUs"  className='navbarLink'>About</Link>
                 <Link href="/contact"  className='navbarLink'>Contact</Link>
             </section>
             <NavbarMenu />

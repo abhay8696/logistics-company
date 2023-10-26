@@ -1,0 +1,87 @@
+.services, .valueAddedServices{
+    padding: 2rem;
+    min-height: 60vh;
+    color: white;
+}
+.services{
+    margin-top: 100px;
+    background: linear-gradient(#c75c5cd2,#c75c5cc9), url('/truckLanding.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.valueAddedServices{
+    background: linear-gradient(#eb964bc4,#eb964bc7), url('/truckLanding.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.services h1{
+    font-size: 3rem;
+}
+.h1Border{
+    margin: 1rem 0 1.5rem 0 !important;
+}
+.valueAddedServices .h1Border{
+    background-color: #c75c5c;
+}
+.servicesGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-gap: 1rem 1rem;
+}
+.servicesBox{
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+}
+.servicesBox img{
+    border-right: 1px dashed #c75c5cc9;
+}
+.servicesBoxTexts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 8px;
+}
+.servicesBoxHead{
+    font-weight: bolder;
+    color: rgb(78, 77, 77);
+    margin-bottom: 0.5rem;
+}
+.servicesBoxDescription{
+    color: rgb(92, 88, 88);
+    padding-top: 0.5rem;
+    border-top: 1px dashed #c75c5cc9;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .servicesGrid{
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+    }
+}
+@media only screen and (max-width: 900px){
+    .servicesBox img{
+        width: 75px;
+    }
+    .servicesBoxHead{
+        margin-bottom: 0.5rem;
+    }
+    .servicesBoxDescription{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 750px){
+    .servicesGrid{
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 500px){
+    .servicesGrid{
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+}

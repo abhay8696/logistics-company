@@ -4,7 +4,8 @@ import Navbar from './components/navbar';
 import './styles/app.css'
 import { Raleway } from 'next/font/google';
 import Link from 'next/link';
-import AboutUs from './about/page';
+import AboutUs from './aboutUs/page';
+import Services from './services/page';
 
 
 const raleway = Raleway({
@@ -21,9 +22,10 @@ export default function Home() {
           <p>We are providing import/export services to all sectors and from all sectors like China, USA, Europe, Far East, Gulf and Upper Gulf etc.</p>
           <section className='site-header-actions'>
               <Link href="/contact" className='site-header-buttons headerButton1'>GET IN TOUCH</Link>
-              <Link href="/about" className='site-header-buttons headerButton2'>ABOUT US</Link>
+              <a href="#aboutUs" className='site-header-buttons headerButton2'>ABOUT US</a>
           </section>
       </section>
+      <Services/>
       <AboutUs/>
     </main>
   )
