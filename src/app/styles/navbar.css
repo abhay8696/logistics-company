@@ -1,5 +1,5 @@
 .navbar{
-    position: absolute;
+    position: fixed;
     padding: 0 2rem;
     display: flex;
     align-items: center;
@@ -47,6 +47,9 @@
     letter-spacing: 1px;
     display: flex;
     align-items: center;
+}
+.navbarLink{
+    transition: all 250ms;
 }
 .navbarLink:hover{
     background-color: rgb(218, 215, 215);

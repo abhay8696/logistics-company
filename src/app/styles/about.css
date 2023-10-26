@@ -1,0 +1,188 @@
+.aboutUs{
+    margin-top: 100px;
+    /* height: 100vh; */
+    color: white;
+    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/namaste.jpg");
+    background-position: center;
+    background-size: cover;
+    /* height: calc(100vh - 100px); */
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 2rem;
+    position: relative;
+}
+.aboutUs h1{
+    font-size: 3rem;
+}
+.h1Border{
+    display: block;
+    height: 5px;
+    width: 50px;
+    border-radius: 4px;
+    background-color: #eb954b;
+    margin: 1rem 0;
+}
+.p1{
+    margin-top: 1rem;
+    animation: fadeIn 1000ms forwards;
+    opacity: 0;
+    font-size: 1.2rem;
+    color: rgb(151, 151, 151);
+    max-width: 500px;
+}
+
+.sideMsg{
+    position: absolute;
+    font-weight: bold;
+    bottom: 1rem;
+    left: 1rem;
+    color: #eb954b;
+}
+.aboutUsCards{
+    background-color: #eb954b;
+    padding: 5rem 1rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.aboutCard{
+    width: 250px;
+    background-color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: gray;
+    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
+    border-radius: 4px;
+}
+.aboutCard h4{
+    margin: 0.5rem -1rem;
+    color: white;
+    background-color: #c75c5c;
+    padding-left: 1rem;
+}
+.aboutCard img{
+    max-width: 100%;
+    aspect-ratio: 1.6;
+}
+.ourPresence{
+    background-color: #c75c5c;
+    height: calc(100vh - 100px);
+    /* padding: 2rem; */
+    color: white;
+    position: relative;
+}
+.ourPresence h2, .ourPresence .mapImgDiv{
+    position: absolute;
+}
+.ourPresence h2{
+    top: 0rem;
+    left: 0;
+    background-color: #eb954b;
+    width: 100%;
+    padding: 0.5rem 2rem;
+}
+.ourPresence .mapDiv{
+    height: calc(100vh - 100px);
+    /* background-color: red; */
+    width: 50%;
+    /* position: relative; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+.locationsSpans{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    min-width: 350px;
+    margin: 0.5rem 0;
+    border: 2px solid white;
+    padding: 0.5rem;
+}
+.locationsSpansTexts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    flex: 1;
+}
+.cityName{
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* padding-bottom: 0.5rem; */
+    /* margin-bottom: 0.5rem; */
+    /* border-bottom: 1px solid white; */
+}
+.ourPresence .mapImgDiv{
+    top: 0;
+    left: 50%;
+}
+.mapImgDiv img{
+    max-height: calc(100vh - 104px);
+}
+@media only screen and (max-width: 900px){
+    .ourPresence{
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+    .ourPresence h2, .mapDiv, .mapImgDiv{
+        position: static !important;
+    }
+    .ourPresence .mapDiv{
+        width: 100%;
+        height: auto;
+        padding: 0 2rem;
+        margin: 0.5rem 0;
+    }
+
+    .locationsSpans{
+        min-width: 250px;
+    }
+    .locationsSpansTexts, .cityName{
+    }
+    .mapImgDiv{
+        display: block;
+        flex: 1;
+        background-image: url('/map.jpeg');
+        background-size: cover;
+        background-position: bottom;
+    }
+    .mapImgDiv img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .aboutCard{
+        width: 80%;
+    }
+    .ourPresence .mapDiv{
+    }
+    .locationsSpans{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 750px){
+    .aboutUsHead p, .aboutSection2 p{
+        max-width: 35vw;
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
