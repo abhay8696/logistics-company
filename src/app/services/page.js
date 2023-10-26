@@ -73,7 +73,7 @@ const Services = () => {
             <Navbar/>
             <section className='services' id='services'>
                 <section>
-                    <h1 className={`${raleway.className}`}>SERVICES</h1>
+                    <h1 className={`${raleway.className}`}>KEY SERVICES</h1>
                     <span className='h1Border'></span>
                 </section>
                 <section className='servicesGrid'>
