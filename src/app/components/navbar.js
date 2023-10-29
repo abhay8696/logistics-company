@@ -5,7 +5,7 @@ import '../styles/navbar.css';
 import NavbarMenu from './navbarMenu';
 
 
-const heebo = Roboto({
+const roboto = Roboto({
     subsets: ['latin'],
     weight: ["900"],
 });
@@ -24,7 +24,7 @@ const Navbar = () => {
                 alt="truck Logo"
                 className={"styles.vercelLogo"}
                 />
-                <span className={`logoText ${heebo.className}`}>Asiatico Logistics</span>
+                <span className={`logoText ${roboto.className}`}>Logistics Company</span>
             </span>
             <section className={`navbarItems ${prompt.className}`}>
                 <Link href="/" className='navbarLink'>Home</Link>

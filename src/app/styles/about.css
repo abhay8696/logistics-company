@@ -80,12 +80,13 @@
 .ourPresence h2, .ourPresence .mapImgDiv{
     position: absolute;
 }
-.ourPresence h2{
+.ourPresence h2, .ourMission h2{
     top: 0rem;
     left: 0;
     background-color: #eb954b;
     width: 100%;
     padding: 0.5rem 2rem;
+    color: white;
 }
 .ourPresence .mapDiv{
     height: calc(100vh - 100px);
@@ -160,6 +161,28 @@
     .mapImgDiv img{
         display: none;
     }
+}
+.ourMission{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+}
+.ourMissionGrid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 2rem;
+    color: white;
+}
+.ourMissionBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#eb964bc4,#eb964bc7), url('/truckLanding.jpg');
+}
+.ourMissionBox img{
+    width: 50%;
 }
 
 @media only screen and (max-width: 500px){

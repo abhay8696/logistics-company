@@ -23,6 +23,7 @@
     color: rgb(63, 58, 58);
     font-size: 1.3rem;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .navbarItems{
     display: flex;

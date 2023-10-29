@@ -29,8 +29,8 @@ const NavbarMenu = () => {
         </section>
         <section className={`menuItems ${prompt.className}`}>
             <Link href="/" className={`menuLink menuLink1  ${menuPosition}`}>Home</Link>
-            <Link href="/services"  className={`menuLink menuLink3  ${menuPosition}`}>Serivces</Link>
-            <Link href="/aboutUs"  className={`menuLink menuLink2  ${menuPosition}`}>About</Link>
+            <Link href="/services"  className={`menuLink menuLink2  ${menuPosition}`}>Serivces</Link>
+            <Link href="/aboutUs"  className={`menuLink menuLink3  ${menuPosition}`}>About</Link>
             <Link href="/contact"  className={`menuLink menuLink4  ${menuPosition}`}>Contact</Link>
         </section>
         </>

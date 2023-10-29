@@ -6,6 +6,7 @@ import { Raleway } from 'next/font/google';
 import Link from 'next/link';
 import AboutUs from './aboutUs/page';
 import Services from './services/page';
+import Contact from './contact/page';
 
 
 const raleway = Raleway({
@@ -27,6 +28,7 @@ export default function Home() {
       </section>
       <Services/>
       <AboutUs/>
+      <Contact/>
     </main>
   )
 }

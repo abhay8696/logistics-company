@@ -54,6 +54,42 @@ const AboutUs = () => {
 
         return arr;
     }
+
+    const displayMissions = ()=>{
+        const data = [
+            {
+                mission: "TO DELIVER SUPERIOR VALUE TO OUR CUSTOMERS",
+                icon: '/customerValue.avif'
+            },
+            {
+                mission: "TO CREATE GROWTH AND DEVELOPMENT OPPORTUNITIES AND A SAFE WORK",
+                icon: '/growth.avif'
+            },
+            {
+                mission: "ENVIRONMENT FOR OUR EMPLOYEES",
+                icon: '/environment.avif'
+            },
+            {
+                mission: "TO IMPROVE QUALITY SERVICES FOR GROWTH OF OUR COMPANY",
+                icon: '/growth2.webp'
+            },
+        ]
+        let arr = [];
+        
+        data.forEach((service)=> {
+            const { mission, icon } = service;
+            arr.push(
+                <section className='ourMissionBox'>
+                    <img src={icon} alt={mission} width="200"/>
+                    <span className='ourMissionBoxTexts'>
+                        <span className='ourMissionBoxHead'>{mission}</span>
+                    </span>
+                </section>
+            )
+        });
+
+        return arr;
+    }
     return (
         <>
             <Navbar/>
@@ -71,8 +107,8 @@ const AboutUs = () => {
             <section className='aboutUsCards'>
                 {displayCards()}
             </section>
-            <section className='ourPresence'>
-                <h2>Find Us</h2>
+            <section className='ourPresence' id='ourPresence'>
+                <h2>OUR PRESENCE</h2>
                 <section className='mapDiv'>
                     {displayLocations()}
                 </section>
@@ -80,6 +116,14 @@ const AboutUs = () => {
                     <img src='map.jpeg'/>
                 </section>
             </section>
+            <section className='ourMission' id='ourMission'>
+                <h2>Our Mission</h2>
+                <section className='ourMissionGrid'>
+                    {displayMissions()}
+                </section>
+            </section>
+            <section className='ourVision' id='ourVision'></section>
+            <section className='ourValues' id='ourValues'></section>
         </>
     );
 };

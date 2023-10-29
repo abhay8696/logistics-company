@@ -4,13 +4,17 @@ import Navbar from '../components/navbar';
 //styles
 import '../styles/services.css'
 import '../styles/about.css';
-import { Raleway } from 'next/font/google';
+import { Raleway, Prompt } from 'next/font/google';
 
 
 const raleway = Raleway({
   subsets: ['latin'],
   weight: ["900"],
 });
+const prompt = Prompt({
+    subsets: ['latin'],
+    weight: ["300", "400", "500", "600"],
+})
 
 const Services = () => {
 
@@ -31,7 +35,7 @@ const Services = () => {
         servicesObj.forEach((service)=> {
             const { name, icon, desc } = service;
             arr.push(
-                <section className='servicesBox'>
+                <section className={`servicesBox ${prompt.className}`}>
                     <img src={icon} alt={name} width="100"/>
                     <span className='servicesBoxTexts'>
                         <span className='servicesBoxHead'>{name}</span>
@@ -56,7 +60,7 @@ const Services = () => {
         additionalServices.forEach((service)=> {
             const { name, icon, desc } = service;
             arr.push(
-                <section className='servicesBox'>
+                <section className={`servicesBox ${prompt.className}`}>
                     <img src={icon} alt={name} width="100"/>
                     <span className='servicesBoxTexts'>
                         <span className='servicesBoxHead'>{name}</span>
