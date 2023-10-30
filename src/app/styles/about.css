@@ -80,7 +80,7 @@
 .ourPresence h2, .ourPresence .mapImgDiv{
     position: absolute;
 }
-.ourPresence h2, .ourMission h2{
+.ourPresence h2{
     top: 0rem;
     left: 0;
     background-color: #eb954b;
@@ -162,29 +162,58 @@
         display: none;
     }
 }
-.ourMission{
-    height: calc(100vh - 100px);
+.mission-values-container{
+    min-height: calc(100vh - 100px);
+    background: url('/truckLanding.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    color: darkred;
+}
+.mission-values{
+    /* min-height: calc(100vh - 100px); */
     display: flex;
     flex-direction: column;
-}
-.ourMissionGrid{
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    margin: 2rem;
-    color: white;
-}
-.ourMissionBox{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(#eb964bc4,#eb964bc7), url('/truckLanding.jpg');
-}
-.ourMissionBox img{
+    padding: 2rem;
     width: 50%;
 }
-
+.ourMission{
+    background: linear-gradient(#c75c5caf,#c75c5ce7);
+}
+.ourvalues{
+    background: linear-gradient(#eb964bc4,#eb964bc7);
+}
+.h1Border{
+    /* height: 0.5rem; */
+    margin: 1rem 0;
+    background-color: darkred;
+    opacity: 0.7;
+}
+.mission-values-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-gap: 1rem 1rem;
+}
+.missionBox{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    max-width: 500px;
+}
+.missionBox img{
+    max-width: 50px;
+    padding-right: 0.5rem;
+    border-right: 1px dashed darkred;
+    opacity: 0.9;
+}
+.missionBoxDescription{
+    color: #8b0000;
+    margin-left: 8px;
+    border: none;
+    opacity: 0.8;
+}
 @media only screen and (max-width: 500px){
     .aboutCard{
         width: 80%;
@@ -198,6 +227,23 @@
 @media only screen and (min-width: 750px){
     .aboutUsHead p, .aboutSection2 p{
         max-width: 35vw;
+    }
+}
+@media only screen and (max-width: 900px){
+    .mission-values-container{
+        flex-direction: column;
+    }
+    .mission-values{
+        width: 100vw;
+    }
+    .missionBoxDescription{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 500px){
+    .mission-values-grid{
+        /* margin-left: -1rem;
+        margin-right: -1rem; */
     }
 }
 

@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 //styles
 import '../styles/services.css'
 import '../styles/about.css';
-import { Raleway, Prompt } from 'next/font/google';
+import { Raleway, Prompt } from '@next/font/google';
 
 
 const raleway = Raleway({

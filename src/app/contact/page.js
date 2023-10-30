@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 //styles
 import '../styles/about.css';
 import '../styles/contact.css'
-import { Prompt, Raleway, Roboto } from 'next/font/google';
+import { Prompt, Raleway, Roboto } from '@next/font/google';
 import ContactForm from '../components/contactForm';
 
 
@@ -26,7 +26,7 @@ const Contact = () => {
     return (
         <>
             <Navbar />
-            <section className={`aboutUs ${raleway.className}`} id='aboutUs'>
+            <section className={`aboutUs ${raleway.className}`} id='contact'>
                 <section>
                     <h1>CONTACT US</h1>
                     <span className='h1Border'></span>

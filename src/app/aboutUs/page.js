@@ -2,12 +2,21 @@ import React from 'react';
 import '../styles/about.css';
 import Navbar from '../components/navbar';
 
-import { Raleway } from 'next/font/google';
+import { Raleway, Prompt } from '@next/font/google';
+import { Roboto } from 'next/font/google';
 
 
 const raleway = Raleway({
   subsets: ['latin'],
   weight: ["900"],
+});
+const prompt = Prompt({
+    subsets: ['latin'],
+    weight: ["300", "400", "500", "600"],
+});
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ["900"],
 });
 
 const AboutUs = () => {
@@ -35,7 +44,7 @@ const AboutUs = () => {
         const data = [
             {name: 'Trusted Partner', icon: '/trust2.avif', desc: 'We are trusted and total logistics provider for all Logistics related services all over Globe.'},
             {name: 'Shipments', icon: '/shipments.avif', desc: 'We are handling all types of shipments by Air & Sea from India to all parts of world and vice versa.'},
-            {name: 'Services', icon: '/services1.avif', desc: 'Aisatico Vision Global Logistics is also providing custom clearance/customs broking and transportation/trucking services in India.'},
+            {name: 'Services', icon: '/services1.avif', desc: 'Aisatico values Global Logistics is also providing custom clearance/customs broking and transportation/trucking services in India.'},
             {name: 'Relations', icon: '/trust1.avif', desc: 'All our employees are very respective to all our clients. Our clients are very happy with our logistics services. We are easily introduced by our clients so our business is growing easily.'},
             {name: 'Overseas Serivces', icon: '/overseas.avif', desc: 'We are providing import/export services to all sectors and from all sectors like China, USA, Europe, Far East, Gulf and Upper Gulf etc.'},
         ];
@@ -56,34 +65,79 @@ const AboutUs = () => {
     }
 
     const displayMissions = ()=>{
-        const data = [
+        const missions = [
             {
+                name: "customerValue",
                 mission: "TO DELIVER SUPERIOR VALUE TO OUR CUSTOMERS",
-                icon: '/customerValue.avif'
+                icon: '/namaste.svg'
             },
             {
+                name: "growth",
                 mission: "TO CREATE GROWTH AND DEVELOPMENT OPPORTUNITIES AND A SAFE WORK",
-                icon: '/growth.avif'
+                icon: '/growth.svg'
             },
             {
+                name: "environment",
                 mission: "ENVIRONMENT FOR OUR EMPLOYEES",
-                icon: '/environment.avif'
+                icon: '/happy.svg'
             },
             {
+                name: "growth2",
                 mission: "TO IMPROVE QUALITY SERVICES FOR GROWTH OF OUR COMPANY",
-                icon: '/growth2.webp'
+                icon: '/quality.svg'
             },
         ]
         let arr = [];
         
-        data.forEach((service)=> {
-            const { mission, icon } = service;
+        missions.forEach((service)=> {
+            const { name, mission, icon } = service;
             arr.push(
-                <section className='ourMissionBox'>
-                    <img src={icon} alt={mission} width="200"/>
-                    <span className='ourMissionBoxTexts'>
-                        <span className='ourMissionBoxHead'>{mission}</span>
-                    </span>
+                <section className={`missionBox`} id={`mission-${name}`}>
+                    <img src={icon} alt={mission} width="75"/>
+                    <span className='missionBoxDescription'>{mission}</span>
+                </section>
+            )
+        });
+
+        return arr;
+    }
+
+    const displayValues = ()=> {
+        const values = [
+            {
+                name: "legal",
+                mission: "ACT HONESTLY, ETHICALLY, AND LEGALLY",
+                icon: '/legal.svg'
+            },
+            {
+                name: "responsibility",
+                mission: "ACCEPT PERSONAL RESPONSIBILITY",
+                icon: '/person.svg'
+            },
+            {
+                name: "respect",
+                mission: "SHOW RESPECT FOR THE INDIVIDUAL",
+                icon: '/handshake.svg'
+            },
+            {
+                name: "productive",
+                mission: "BE MORE PRODUCTIVE AND EFFICIENT",
+                icon: '/light-bulb.svg'
+            },
+            {
+                name: "finance",
+                mission: "BE FISCALLY RESPONSIBLE",
+                icon: '/dollar.svg'
+            },
+        ]
+        let arr = [];
+        
+        values.forEach((service)=> {
+            const { name, mission, icon } = service;
+            arr.push(
+                <section className={`missionBox`} id={`mission-${name}`}>
+                    <img src={icon} alt={name} width="75"/>
+                    <span className='missionBoxDescription'>{mission}</span>
                 </section>
             )
         });
@@ -93,7 +147,7 @@ const AboutUs = () => {
     return (
         <>
             <Navbar/>
-            <section className='aboutUs' id='aboutUs'>
+            <section className={`aboutUs ${prompt.className}`} id='aboutUs'>
                 <section>
                     <h1 className={`${raleway.className}`}>ABOUT US</h1>
                     <span className='h1Border'></span>
@@ -104,10 +158,10 @@ const AboutUs = () => {
                 
                 <span className='sideMsg'>YOUR TRUSTED LOGISTICS PARTNER</span>
             </section>
-            <section className='aboutUsCards'>
+            <section className={`aboutUsCards ${prompt.className}`}>
                 {displayCards()}
             </section>
-            <section className='ourPresence' id='ourPresence'>
+            <section className={`ourPresence ${prompt.className}`} id='ourPresence'>
                 <h2>OUR PRESENCE</h2>
                 <section className='mapDiv'>
                     {displayLocations()}
@@ -116,13 +170,22 @@ const AboutUs = () => {
                     <img src='map.jpeg'/>
                 </section>
             </section>
-            <section className='ourMission' id='ourMission'>
-                <h2>Our Mission</h2>
-                <section className='ourMissionGrid'>
-                    {displayMissions()}
+            <section className={`mission-values-container ${prompt.className}`}>
+                <section className='mission-values ourMission' id='ourMission'>
+                    <h2>Our Mission</h2>
+                    <span className='h1Border h2Border'></span>
+                    <section className='mission-values-grid'>
+                        {displayMissions()}
+                    </section>
+                </section>
+                <section className='mission-values ourvalues' id='ourvalues'>
+                    <h2>Our Values</h2>
+                    <span className='h1Border h2Border'></span>
+                    <section className='mission-values-grid'>
+                        {displayValues()}
+                    </section>
                 </section>
             </section>
-            <section className='ourVision' id='ourVision'></section>
             <section className='ourValues' id='ourValues'></section>
         </>
     );
