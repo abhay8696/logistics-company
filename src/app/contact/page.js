@@ -26,7 +26,7 @@ const Contact = () => {
     return (
         <>
             <Navbar />
-            <section className={`aboutUs ${raleway.className}`} id='contact'>
+            <section className={`aboutUs ${raleway.className} offsetForScrollTop`} id='contact'>
                 <section>
                     <h1>CONTACT US</h1>
                     <span className='h1Border'></span>

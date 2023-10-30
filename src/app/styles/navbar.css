@@ -99,7 +99,6 @@
 .menuLink:hover{
     background-color: rgb(218, 215, 215);
 }
-
 @media only screen and (max-width: 900px){
     .navbarLink{
         display: none;
@@ -109,6 +108,9 @@
     }
     .menuItems{
         display: flex;
+    }
+    .dummyForMenuExit{
+        display: block;
     }
 }
 

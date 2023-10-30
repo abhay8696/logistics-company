@@ -147,7 +147,7 @@ const AboutUs = () => {
     return (
         <>
             <Navbar/>
-            <section className={`aboutUs ${prompt.className}`} id='aboutUs'>
+            <section className={`aboutUs ${prompt.className} offsetForScrollTop`} id='aboutUs'>
                 <section>
                     <h1 className={`${raleway.className}`}>ABOUT US</h1>
                     <span className='h1Border'></span>
@@ -156,14 +156,19 @@ const AboutUs = () => {
                     Asiatico Vision Global Logistics Pvt. Ltd established in 2020, is trusted logistics partner for all of our clients in Logistics Industry.
                 </p>
                 
+                <section className='about-header-actions'>
+                    <a href="#ourPresence" className='about-header-buttons aboutButton1'>OUR PRESENCE</a>
+                    <a href="#ourMission" className='about-header-buttons aboutButton2'>OUR MISSION AND VALUES</a>
+                </section>
                 <span className='sideMsg'>YOUR TRUSTED LOGISTICS PARTNER</span>
             </section>
             <section className={`aboutUsCards ${prompt.className}`}>
                 {displayCards()}
             </section>
-            <section className={`ourPresence ${prompt.className}`} id='ourPresence'>
-                <h2>OUR PRESENCE</h2>
+            <section className={`ourPresence ${prompt.className} offsetForScrollTop`} id='ourPresence'>
                 <section className='mapDiv'>
+                    <h2>OUR PRESENCE</h2>
+                    <span className='h1Border h2Border'></span>
                     {displayLocations()}
                 </section>
                 <section className='mapImgDiv'>
@@ -171,14 +176,14 @@ const AboutUs = () => {
                 </section>
             </section>
             <section className={`mission-values-container ${prompt.className}`}>
-                <section className='mission-values ourMission' id='ourMission'>
+                <section className='mission-values ourMission offsetForScrollTop' id='ourMission'>
                     <h2>Our Mission</h2>
                     <span className='h1Border h2Border'></span>
                     <section className='mission-values-grid'>
                         {displayMissions()}
                     </section>
                 </section>
-                <section className='mission-values ourvalues' id='ourvalues'>
+                <section className='mission-values ourvalues' id='ourValues'>
                     <h2>Our Values</h2>
                     <span className='h1Border h2Border'></span>
                     <section className='mission-values-grid'>
@@ -186,7 +191,6 @@ const AboutUs = () => {
                     </section>
                 </section>
             </section>
-            <section className='ourValues' id='ourValues'></section>
         </>
     );
 };
