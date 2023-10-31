@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import Navbar from './components/navbar';
 
 import './styles/app.css'
-import { Raleway } from '@next/font/google';
+import { Raleway } from 'next/font/google';
 import Link from 'next/link';
 import AboutUs from './aboutUs/page';
 import Services from './services/page';
@@ -16,8 +15,8 @@ const raleway = Raleway({
 });
 const prompt = Prompt({
     subsets: ['latin'],
-    weight: ["300", "400", "500", "600"],
-});
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+})
 
 export default function Home() {
   return (

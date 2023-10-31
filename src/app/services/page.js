@@ -4,16 +4,16 @@ import Navbar from '../components/navbar';
 //styles
 import '../styles/services.css'
 import '../styles/about.css';
-import { Raleway, Prompt } from '@next/font/google';
+import { Raleway, Prompt } from 'next/font/google';
 
 
 const raleway = Raleway({
   subsets: ['latin'],
-  weight: ["900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 const prompt = Prompt({
     subsets: ['latin'],
-    weight: ["300", "400", "500", "600"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
 const Services = () => {

@@ -23,7 +23,7 @@
 .contactInfoBlock{
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     /* background-color: white; */
     max-height: 100px;
 }
@@ -56,6 +56,7 @@
 }
 .formDiv h3{
     margin-bottom: 1rem;
+    /* font-weight: 400; */
 }
 .contactForm{
     display: flex;
@@ -85,7 +86,7 @@
 }
 @media only screen and (max-width: 900px){
     .contactFormSection{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .contactInfo{
         /* height: 50%; */

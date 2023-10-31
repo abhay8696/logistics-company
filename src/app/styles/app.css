@@ -19,11 +19,13 @@
 }
 
 .site-header h1{
-    font-size: 5rem;
+    font-size: 4rem;
+    font-weight: 700;
 }
 .site-header p{
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
     font-size: 1.1rem;
+    /* color: rgb(204, 204, 204); */
 }
 .site-header-actions{
     margin-top: 1rem;

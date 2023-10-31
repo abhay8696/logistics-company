@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/about.css';
 import Navbar from '../components/navbar';
 
-import { Raleway, Prompt } from '@next/font/google';
+import { Raleway, Prompt } from 'next/font/google';
 import { Roboto } from 'next/font/google';
 
 
