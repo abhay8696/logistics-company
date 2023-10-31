@@ -16,11 +16,14 @@ const prompt = Prompt({
 
 const Navbar = () => {
 
+    //url for images
+    let prefix = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
+
     return (
         <nav className={`navbar ${prompt.className}`}>
             <span className='logo'>
                 <img
-                src="/truck.svg"
+                src={`${prefix}/truck.svg`}
                 alt="truck Logo"
                 className={"styles.vercelLogo"}
                 />
