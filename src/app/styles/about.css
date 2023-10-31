@@ -2,9 +2,6 @@
     margin-top: 100px;
     /* height: 100vh; */
     color: white;
-    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/namaste.jpg");
-    background-position: center;
-    background-size: cover;
     /* height: calc(100vh - 100px); */
     height: 60vh;
     display: flex;
@@ -13,6 +10,16 @@
     text-align: left;
     padding: 2rem;
     position: relative;
+}
+.backgroundForAboutHeader-dev{
+    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/namaste.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.backgroundForAboutHeader-prod{
+    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/logistics-company/namaste.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .aboutUs h1{
     font-size: 3rem;

@@ -19,10 +19,15 @@ const raleway = Raleway({
 
 const Contact = () => {
 
+    //url for images
+    let prefixClassName = process.env.NODE_ENV === 'development' ? 'backgroundForAboutHeader-dev' : 'backgroundForAboutHeader-prod';
+    let backgroundForContactFormSection = process.env.NODE_ENV === 'development' ? 'backgroundForContactFormSection-dev' : 'backgroundForContactFormSection-prod';
+    let prefixSrc = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
+
     return (
         <>
             <Navbar />
-            <section className={`aboutUs ${raleway.className} offsetForScrollTop`} id='contact'>
+            <section className={`aboutUs ${raleway.className} offsetForScrollTop ${prefixClassName}`} id='contact'>
                 <section>
                     <h1>CONTACT US</h1>
                     <span className='h1Border'></span>
@@ -33,7 +38,7 @@ const Contact = () => {
                 
                 {/* <span className='sideMsg'>YOUR TRUSTED LOGISTICS PARTNER</span> */}
             </section>
-            <section className={`contactFormSection ${prompt.className}`}>
+            <section className={`contactFormSection ${prompt.className} ${backgroundForContactFormSection}`}>
                 <secton className='contactInfo'>
                     <section className='contactInfoBlock office'>
                         <span className='contactInfoBlockName'>Office</span>

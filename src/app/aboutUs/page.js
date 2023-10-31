@@ -21,6 +21,10 @@ const roboto = Roboto({
 
 const AboutUs = () => {
 
+    //url for images
+    let prefixClassName = process.env.NODE_ENV === 'development' ? 'backgroundForAboutHeader-dev' : 'backgroundForAboutHeader-prod';
+    let prefixSrc = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
+
     const displayLocations = ()=> {
         const locations = ['DELHI', 'SURAT', 'MUMBAI', 'CHENNAI', 'BANGALORE'];
 
@@ -29,7 +33,7 @@ const AboutUs = () => {
         locations.forEach(city=> {
             arr.push(
                 <span className='locationsSpans'>
-                    <img src='/locationIcon.svg' width='25' alt='location icon'/>
+                    <img src={`${prefixSrc}/locationIcon.svg`} width='25' alt='location icon'/>
                     <span className='locationsSpansTexts'>
                         <span className='cityName'>{city}</span>
                         {/* <span>CALL: +91 123 456 789</span> */}
@@ -42,11 +46,11 @@ const AboutUs = () => {
 
     const displayCards = ()=> {
         const data = [
-            {name: 'Trusted Partner', icon: '/trust2.avif', desc: 'We are trusted and total logistics provider for all Logistics related services all over Globe.'},
-            {name: 'Shipments', icon: '/shipments.avif', desc: 'We are handling all types of shipments by Air & Sea from India to all parts of world and vice versa.'},
-            {name: 'Services', icon: '/services1.avif', desc: 'Aisatico values Global Logistics is also providing custom clearance/customs broking and transportation/trucking services in India.'},
-            {name: 'Relations', icon: '/trust1.avif', desc: 'All our employees are very respective to all our clients. Our clients are very happy with our logistics services. We are easily introduced by our clients so our business is growing easily.'},
-            {name: 'Overseas Serivces', icon: '/overseas.avif', desc: 'We are providing import/export services to all sectors and from all sectors like China, USA, Europe, Far East, Gulf and Upper Gulf etc.'},
+            {name: 'Trusted Partner', icon: `${prefixSrc}/trust2.avif`, desc: 'We are trusted and total logistics provider for all Logistics related services all over Globe.'},
+            {name: 'Shipments', icon: `${prefixSrc}/shipments.avif`, desc: 'We are handling all types of shipments by Air & Sea from India to all parts of world and vice versa.'},
+            {name: 'Services', icon: `${prefixSrc}/services1.avif`, desc: 'Aisatico values Global Logistics is also providing custom clearance/customs broking and transportation/trucking services in India.'},
+            {name: 'Relations', icon: `${prefixSrc}/trust1.avif`, desc: 'All our employees are very respective to all our clients. Our clients are very happy with our logistics services. We are easily introduced by our clients so our business is growing easily.'},
+            {name: 'Overseas Serivces', icon: `${prefixSrc}/overseas.avif`, desc: 'We are providing import/export services to all sectors and from all sectors like China, USA, Europe, Far East, Gulf and Upper Gulf etc.'},
         ];
 
         let arr = [];
@@ -69,22 +73,22 @@ const AboutUs = () => {
             {
                 name: "customerValue",
                 mission: "TO DELIVER SUPERIOR VALUE TO OUR CUSTOMERS",
-                icon: '/namaste.svg'
+                icon: `${prefixSrc}/namaste.svg`
             },
             {
                 name: "growth",
                 mission: "TO CREATE GROWTH AND DEVELOPMENT OPPORTUNITIES AND A SAFE WORK",
-                icon: '/growth.svg'
+                icon: `${prefixSrc}/growth.svg`
             },
             {
                 name: "environment",
                 mission: "ENVIRONMENT FOR OUR EMPLOYEES",
-                icon: '/happy.svg'
+                icon: `${prefixSrc}/happy.svg`
             },
             {
                 name: "growth2",
                 mission: "TO IMPROVE QUALITY SERVICES FOR GROWTH OF OUR COMPANY",
-                icon: '/quality.svg'
+                icon: `${prefixSrc}/quality.svg`
             },
         ]
         let arr = [];
@@ -107,27 +111,27 @@ const AboutUs = () => {
             {
                 name: "legal",
                 mission: "ACT HONESTLY, ETHICALLY, AND LEGALLY",
-                icon: '/legal.svg'
+                icon: `${prefixSrc}/legal.svg`
             },
             {
                 name: "responsibility",
                 mission: "ACCEPT PERSONAL RESPONSIBILITY",
-                icon: '/person.svg'
+                icon: `${prefixSrc}/person.svg`
             },
             {
                 name: "respect",
                 mission: "SHOW RESPECT FOR THE INDIVIDUAL",
-                icon: '/handshake.svg'
+                icon: `${prefixSrc}/handshake.svg`
             },
             {
                 name: "productive",
                 mission: "BE MORE PRODUCTIVE AND EFFICIENT",
-                icon: '/light-bulb.svg'
+                icon: `${prefixSrc}/light-bulb.svg`
             },
             {
                 name: "finance",
                 mission: "BE FISCALLY RESPONSIBLE",
-                icon: '/dollar.svg'
+                icon: `${prefixSrc}/dollar.svg`
             },
         ]
         let arr = [];
@@ -147,7 +151,7 @@ const AboutUs = () => {
     return (
         <>
             <Navbar/>
-            <section className={`aboutUs ${prompt.className} offsetForScrollTop`} id='aboutUs'>
+            <section className={`aboutUs ${prompt.className} offsetForScrollTop ${prefixClassName}`} id='aboutUs'>
                 <section>
                     <h1 className={`${raleway.className}`}>ABOUT US</h1>
                     <span className='h1Border'></span>

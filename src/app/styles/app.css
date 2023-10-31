@@ -3,21 +3,23 @@
 }
 
 .site-header{
-    /* height: 500px; */
-    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%), url("/truckLanding.jpg"); */
-    /* height: calc(100vh - 100px); */
     height: 100vh;
-    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/truckLanding.jpg");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
     padding: 2rem;
 }
-
+.backgroundForHeader-dev{
+    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/truckLanding.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
+.backgroundForHeader-prod{
+    background: linear-gradient(to right,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/logistics-company/truckLanding.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
 .site-header h1{
     font-size: 4rem;
     font-weight: 700;
@@ -60,11 +62,15 @@
 }
 
 @media only screen and (max-width: 900px){
-    .site-header{
+    .backgroundForHeader-dev{
         background: linear-gradient(to top,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/truckLanding.jpg");
         background-position: bottom;
         background-size: cover;
-        background-repeat: no-repeat;
+    }
+    .backgroundForHeader-prod{
+        background: linear-gradient(to top,rgb(0, 0, 0),rgba(255, 255, 255, 0.041)), url("/logistics-company/truckLanding.jpg");
+        background-position: bottom;
+        background-size: cover;
     }
     .site-header h1{
         font-size: 3rem;

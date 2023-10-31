@@ -19,10 +19,13 @@ const prompt = Prompt({
 })
 
 export default function Home() {
+  //url for images
+  let prefixClassName = process.env.NODE_ENV === 'development' ? 'backgroundForHeader-dev' : 'backgroundForHeader-prod';
+
   return (
     <main className={""}>
       <Navbar/>
-      <section className={`site-header ${prompt.className}`} id='home'>
+      <section className={`site-header ${prompt.className} ${prefixClassName}`} id='home'>
           <h1 className={`${raleway.className}`}>YOUR TRUSTED LOGISTICS PARTNER</h1>
           <p>We are providing import/export services to all sectors and from all sectors like China, USA, Europe, Far East, Gulf and Upper Gulf etc.</p>
           <section className='site-header-actions'>

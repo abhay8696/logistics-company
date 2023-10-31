@@ -3,10 +3,17 @@
     width: 100vw;
     display: flex;
     justify-content: center;
+    color: darkred;
+}
+.backgroundForContactFormSection-dev{
     background:url('/truckLanding.jpg');
     background-size: cover;
     background-position: bottom;
-    color: darkred;
+}
+.backgroundForContactFormSection-prod{
+    background:url('/logistics-company/truckLanding.jpg');
+    background-size: cover;
+    background-position: bottom;
 }
 .contactFormSection *{
     box-sizing: border-box;

@@ -17,11 +17,9 @@ const prompt = Prompt({
 })
 
 const Services = () => {
-
-    let prefix = '/logistics-company';
-    const environment = process.env.NODE_ENV;
-
-    if(environment === 'development') prefix = '';
+    
+    //url for images
+    let prefix = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
 
     const displayServicesBox = ()=> {
 
