@@ -14,6 +14,9 @@ const prompt = Prompt({
 const NavbarMenu = () => {
     const [menuPosition, setMenuPosition] = useState("menuOFF");
 
+    //url for images
+    let prefix = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
+
     const handleClick = ()=>{
         setMenuPosition(pre=> pre === "menuCentre" ? "menuRight" : "menuCentre");
     }
@@ -21,7 +24,7 @@ const NavbarMenu = () => {
         <>
         <section className='menuButton'>
             <img
-            src="/menu-grey.svg"
+            src={`${prefix}/menu-grey.svg`}
             alt="menu button"
             className={"styles.vercelLogo"}
             onClick={handleClick}

@@ -176,7 +176,7 @@ const AboutUs = () => {
                     {displayLocations()}
                 </section>
                 <section className='mapImgDiv'>
-                    <img src='map.jpeg'/>
+                    <img src={`${prefixSrc}/map.jpeg`}/>
                 </section>
             </section>
             <section className={`mission-values-container ${prompt.className}`}>
