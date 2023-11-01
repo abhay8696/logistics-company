@@ -61,10 +61,12 @@
     position: absolute;
     top: 100px;
     left: 0;
-    right: 0;
+    height: calc(100vh - 100px);
+    width: 100vw;
     display: none;
     flex-direction: column;
     z-index: 1;
+    transform: translateX(100%);
 }
 .menuLink{
     color: #746a6a;
@@ -74,15 +76,12 @@
     border-bottom: 1px solid #746a6a21;
     /* transform: translateX(100%); */
 }
-.menuOFF{
-    transform: translateX(100%);
-}
 .menuRight{
-    transform: translateX(0%);
+    transform: translateX(-100%);
     animation: slideRight 300ms forwards;
 }
 .menuCentre{
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
     animation: slideCenter 300ms forwards;
 }
 .menuLink2{
@@ -99,6 +98,12 @@
 }
 .menuLink:hover{
     background-color: rgb(218, 215, 215);
+}
+.dummyForNavbarMenu{
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    flex: 1;
 }
 @media only screen and (max-width: 900px){
     .navbarLink{
@@ -122,17 +127,17 @@
 
 @keyframes slideCenter {
     from{
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
     to{
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
 }
 @keyframes slideRight {
     from{
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
     to{
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 }

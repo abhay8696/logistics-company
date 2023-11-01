@@ -12,7 +12,7 @@ const prompt = Prompt({
 })
 
 const NavbarMenu = () => {
-    const [menuPosition, setMenuPosition] = useState("menuOFF");
+    const [menuPosition, setMenuPosition] = useState("");
 
     //url for images
     let prefix = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
@@ -35,6 +35,7 @@ const NavbarMenu = () => {
             <Link href="/services"  className={`menuLink menuLink2  ${menuPosition}`}>Serivces</Link>
             <Link href="/aboutUs"  className={`menuLink menuLink3  ${menuPosition}`}>About</Link>
             <Link href="/contact"  className={`menuLink menuLink4  ${menuPosition}`}>Contact</Link>
+            <section onClick={handleClick} className={`dummyForNavbarMenu ${menuPosition}`}></section>
         </section>
         </>
     );
