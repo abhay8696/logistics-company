@@ -24,6 +24,7 @@ const AboutUs = () => {
     //url for images
     let prefixClassName = process.env.NODE_ENV === 'development' ? 'backgroundForAboutHeader-dev' : 'backgroundForAboutHeader-prod';
     let prefixSrc = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
+    let backgroundForMapImgDiv = process.env.NODE_ENV === 'development' ? 'backgroundForMapImgDiv-dev' : 'backgroundForMapImgDiv-prod';
 
     const displayLocations = ()=> {
         const locations = ['DELHI', 'SURAT', 'MUMBAI', 'CHENNAI', 'BANGALORE'];
@@ -175,7 +176,7 @@ const AboutUs = () => {
                     <span className='h1Border h2Border'></span>
                     {displayLocations()}
                 </section>
-                <section className='mapImgDiv'>
+                <section className={`mapImgDiv ${backgroundForMapImgDiv}`}>
                     <img src={`${prefixSrc}/map.jpeg`}/>
                 </section>
             </section>

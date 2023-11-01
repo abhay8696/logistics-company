@@ -192,7 +192,14 @@
     .mapImgDiv{
         display: block;
         flex: 1;
+    }
+    .backgroundForMapImgDiv-dev{
         background-image: url('/map.jpeg');
+        background-size: cover;
+        background-position: bottom;
+    }
+    .backgroundForMapImgDiv-prod{
+        background-image: url('/logistics-company/map.jpeg');
         background-size: cover;
         background-position: bottom;
     }
