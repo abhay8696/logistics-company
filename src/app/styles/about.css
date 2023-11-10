@@ -71,37 +71,8 @@
     left: 1rem;
     color: #eb954b;
 }
-.aboutUsCards{
-    background-color: #eb954b;
-    padding: 5rem 1rem;
-    display: flex;
-    /* align-items: center; */
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.aboutCard{
-    width: 250px;
-    background-color: white;
-    padding: 1rem;
-    margin: 0.5rem;
-    color: gray;
-    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
-    border-radius: 4px;
-}
-.aboutCard h4{
-    margin: 0.5rem -1rem;
-    color: white;
-    background-color: #c75c5c;
-    padding-left: 1rem;
-}
-.aboutCard img{
-    max-width: 100%;
-    aspect-ratio: 1.6;
-}
 .ourPresence{
-    background-color: #c75c5c;
+    background-color: #eb954b;
     height: calc(100vh - 100px);
     /* padding: 2rem; */
     color: darkred;
@@ -260,9 +231,6 @@
     opacity: 0.8;
 }
 @media only screen and (max-width: 500px){
-    .aboutCard{
-        width: 80%;
-    }
     .ourPresence .mapDiv{
     }
     .locationsSpans{

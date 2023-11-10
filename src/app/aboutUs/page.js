@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/about.css';
+import '../styles/cardCaraousel.css';
 import Navbar from '../components/navbar';
 
 import { Raleway, Prompt } from 'next/font/google';
@@ -56,9 +57,9 @@ const AboutUs = () => {
 
         let arr = [];
 
-        data.forEach(card=> {
+        data.forEach((card, index)=> {
             arr.push(
-                <section className='aboutCard'>
+                <section className='aboutCard' id={`aboutCard-${index}`}>
                     <img src={card?.icon} alt={card?.name}/>
                     <h4>{card?.name}</h4>
                     <p>{card?.desc}</p>
@@ -167,8 +168,14 @@ const AboutUs = () => {
                 </section>
                 <span className='sideMsg'>YOUR TRUSTED LOGISTICS PARTNER</span>
             </section>
-            <section className={`aboutUsCards ${prompt.className}`}>
-                {displayCards()}
+            {/* styles of insights section in stored in cardCaraousel.css */}
+            <section className='insights backgroundForInsights-dev'>
+                <section className={`aboutUsCards ${prompt.className}`}>
+                    {displayCards()}
+                </section>
+                <section className='insightsText'>
+                    <span>"Our logistics company, a Trusted Partner, excels in managing international shipments, offering Overseas Services, building strong client relations, and diverse services"</span>
+                </section>
             </section>
             <section className={`ourPresence ${prompt.className} offsetForScrollTop`} id='ourPresence'>
                 <section className='mapDiv'>

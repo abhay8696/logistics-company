@@ -1,0 +1,129 @@
+
+.backgroundForInsights-dev{
+    background:url('/truckLanding.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.backgroundForInsights-prod{
+    background:url('/logistics-company/truckLanding.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.insights{
+    display: flex;
+    height: calc(100vh - 100px);
+}
+.insightsText{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  linear-gradient(#c75c5cee,#c75c5ce7);
+    color: darkred;
+}
+.insightsText span{
+    max-width: 50%;
+}
+.aboutUsCards{
+    background: linear-gradient(#eb964bc4,#eb964bc7);
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    position: relative;
+}
+.aboutCard{
+    /* width: 250px; */
+    /* background-color: white; */
+    /* min-width: 75%; */
+    /* padding: 1rem; */
+    /* margin: 0.5rem; */
+    color: darkred;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translateX(150%) translateY(-50%); */
+    /* border-radius: 4px; */
+}
+#aboutCard h4{
+    margin: 0.5rem -1rem;
+    color: white;
+    background-color: #c75c5c;
+    padding-left: 1rem;
+}
+.aboutCard img{
+    max-width: 100%;
+    aspect-ratio: 1.6;
+    border: 2px solid darkred;
+    /* border-radius: 0.5rem; */
+}
+
+
+@media only screen and (max-width: 500px){
+    .aboutCard{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .insights{
+        flex-direction: column;
+        height: calc(100vh - 100px);
+    }
+    .aboutUsCards{
+        width: 100vw;
+        height: 60%;
+    }
+    .insightsText{
+        width: 100vw;
+        height: 40%;
+    }
+    .insightsText span{
+        max-width: 75%;
+    }
+}
+
+.aboutCard{
+    animation: caraouse;
+    animation-duration: 30s;  
+    /* total duration: (no of cards) X (duration for single card) */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation- */
+    /* transform: translateX(-50%) translateY(-50%); */
+    opacity: 0;
+}
+/* card no: 0 */
+#aboutCard-0{
+    /* animation-delay: 0s; */
+}
+/* card no: 1*/
+#aboutCard-1{
+    animation-delay: 6s; 
+    /* delay = (card no - 0 ) X (duration for single card)*/
+}
+/* card no: 2*/
+#aboutCard-2{
+    animation-delay: 12s;
+}
+#aboutCard-3{
+    animation-delay: 18s;
+}
+#aboutCard-4{
+    animation-delay: 24s;
+}
+@keyframes caraouse {
+    /* 0s: right, .5s:center, 5.5s:left, 6s to 30s: left */
+    0%{
+        transform: translateX(0%) translateY(-50%);
+        opacity: 0;
+    }
+    1.66%, 18.33%{
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+    }
+    20%, 100%{
+        transform: translateX(-100%) translateY(-50%);
+        opacity: 0;
+    }
+}
