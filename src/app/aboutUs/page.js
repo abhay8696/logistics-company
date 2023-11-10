@@ -26,7 +26,7 @@ const AboutUs = () => {
     let prefixClassName = process.env.NODE_ENV === 'development' ? 'backgroundForAboutHeader-dev' : 'backgroundForAboutHeader-prod';
     let prefixSrc = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
     let backgroundForMapImgDiv = process.env.NODE_ENV === 'development' ? 'backgroundForMapImgDiv-dev' : 'backgroundForMapImgDiv-prod';
-
+    let backgroundForInsights = process.env.NODE_ENV === 'development' ? 'backgroundForInsights-dev' : 'backgroundForInsights-prod';
     const displayLocations = ()=> {
         const locations = ['DELHI', 'SURAT', 'MUMBAI', 'CHENNAI', 'BANGALORE'];
 
@@ -169,7 +169,7 @@ const AboutUs = () => {
                 <span className='sideMsg'>YOUR TRUSTED LOGISTICS PARTNER</span>
             </section>
             {/* styles of insights section in stored in cardCaraousel.css */}
-            <section className='insights backgroundForInsights-dev'>
+            <section className={`insights ${backgroundForInsights}`}>
                 <section className={`aboutUsCards ${prompt.className}`}>
                     {displayCards()}
                 </section>
