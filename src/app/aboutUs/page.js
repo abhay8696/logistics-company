@@ -173,7 +173,7 @@ const AboutUs = () => {
                 <section className={`aboutUsCards ${prompt.className}`}>
                     {displayCards()}
                 </section>
-                <section className='insightsText'>
+                <section className='insightsText'> 
                     <span>"Our logistics company, a Trusted Partner, excels in managing international shipments, offering Overseas Services, building strong client relations, and diverse services"</span>
                 </section>
             </section>
