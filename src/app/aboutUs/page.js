@@ -174,7 +174,7 @@ const AboutUs = () => {
                     {displayCards()}
                 </section>
                 <section className='insightsText'> 
-                    <span>"Our logistics company, a Trusted Partner, excels in managing international shipments, offering Overseas Services, building strong client relations, and diverse services"</span>
+                    <span>{"Our logistics company, a Trusted Partner, excels in managing international shipments, offering Overseas Services, building strong client relations, and diverse services"}</span>
                 </section>
             </section>
             <section className={`ourPresence ${prompt.className} offsetForScrollTop`} id='ourPresence'>
