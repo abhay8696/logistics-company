@@ -2,6 +2,7 @@ import React from 'react';
 import { Roboto, Prompt } from 'next/font/google';
 import Link from 'next/link';
 import '../styles/navbar.css';
+import "../styles/commonStyles.css"
 import NavbarMenu from './navbarMenu';
 
 
@@ -20,7 +21,7 @@ const Navbar = () => {
     let prefix = process.env.NODE_ENV === 'development' ? '' : '/logistics-company';
 
     return (
-        <nav className={`navbar ${prompt.className}`}>
+        <nav className={`navbar ${prompt.className} common-padding`}>
             <span className='logo'>
                 <img
                 src={`${prefix}/truck.svg`}

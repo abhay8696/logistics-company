@@ -1,6 +1,7 @@
 import Navbar from './components/navbar';
 
 import './styles/app.css'
+import "./styles/commonStyles.css"
 import { Raleway } from 'next/font/google';
 import Link from 'next/link';
 import AboutUs from './aboutUs/page';
@@ -23,9 +24,9 @@ export default function Home() {
   let prefixClassName = process.env.NODE_ENV === 'development' ? 'backgroundForHeader-dev' : 'backgroundForHeader-prod';
 
   return (
-    <main className={""}>
+    <main className={"main"}>
       <Navbar/>
-      <section className={`site-header ${prompt.className} ${prefixClassName}`} id='home'>
+      <section className={`site-header ${prompt.className} ${prefixClassName} common-padding`} id='home'>
           <h1 className={`${raleway.className}`}>YOUR TRUSTED LOGISTICS PARTNER</h1>
           <p>We are providing import/export services to all sectors and from all sectors like China, USA, Europe, Far East, Gulf and Upper Gulf etc.</p>
           <section className='site-header-actions'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/about.css';
 import '../styles/cardCaraousel.css';
+import '../styles/commonStyles.css';
 import Navbar from '../components/navbar';
 
 import { Raleway, Prompt } from 'next/font/google';
@@ -153,7 +154,7 @@ const AboutUs = () => {
     return (
         <>
             <Navbar/>
-            <section className={`aboutUs ${prompt.className} offsetForScrollTop ${prefixClassName}`} id='aboutUs'>
+            <section className={`common-padding aboutUs ${prompt.className} offsetForScrollTop ${prefixClassName}`} id='aboutUs'>
                 <section>
                     <h1 className={`${raleway.className}`}>ABOUT US</h1>
                     <span className='h1Border'></span>
@@ -170,15 +171,15 @@ const AboutUs = () => {
             </section>
             {/* styles of insights section in stored in cardCaraousel.css */}
             <section className={`insights ${backgroundForInsights}`}>
-                <section className={`aboutUsCards ${prompt.className}`}>
+                <section className={`common-padding-left aboutUsCards ${prompt.className}`}>
                     {displayCards()}
                 </section>
-                <section className='insightsText'> 
+                <section className='common-padding-right insightsText'> 
                     <span>{"Our logistics company, a Trusted Partner, excels in managing international shipments, offering Overseas Services, building strong client relations, and diverse services"}</span>
                 </section>
             </section>
             <section className={`ourPresence ${prompt.className} offsetForScrollTop`} id='ourPresence'>
-                <section className='mapDiv'>
+                <section className='common-padding-left mapDiv'>
                     <h2>OUR PRESENCE</h2>
                     <span className='h1Border h2Border'></span>
                     {displayLocations()}
@@ -188,14 +189,14 @@ const AboutUs = () => {
                 </section>
             </section>
             <section className={`mission-values-container ${prompt.className}`}>
-                <section className='mission-values ourMission offsetForScrollTop' id='ourMission'>
+                <section className='mission-values common-padding-left ourMission offsetForScrollTop' id='ourMission'>
                     <h2>Our Mission</h2>
                     <span className='h1Border h2Border'></span>
                     <section className='mission-values-grid'>
                         {displayMissions()}
                     </section>
                 </section>
-                <section className='mission-values ourvalues' id='ourValues'>
+                <section className='mission-values common-padding-right ourvalues' id='ourValues'>
                     <h2>Our Values</h2>
                     <span className='h1Border h2Border'></span>
                     <section className='mission-values-grid'>

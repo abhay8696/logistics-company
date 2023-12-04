@@ -4,6 +4,7 @@ import Navbar from '../components/navbar';
 //styles
 import '../styles/services.css'
 import '../styles/about.css';
+import '../styles/commonStyles.css';
 import { Raleway, Prompt } from 'next/font/google';
 
 
@@ -77,7 +78,7 @@ const Services = () => {
     return (
         <>
             <Navbar/>
-            <section className='services' id='services'>
+            <section className='services common-padding' id='services'>
                 <section>
                     <h1 className={`${raleway.className}`}>KEY SERVICES</h1>
                     <span className='h1Border'></span>
@@ -86,7 +87,7 @@ const Services = () => {
                     {displayServicesBox()}
                 </section>
             </section>
-            <section className='valueAddedServices' id='valueAddedServices'>
+            <section className='valueAddedServices common-padding' id='valueAddedServices'>
                 <section>
                     <h2 className={`${raleway.className}`}>VALUE ADDED SERVICES</h2>
                     <span className='h1Border'></span>

@@ -4,6 +4,7 @@ import Navbar from '../components/navbar';
 //styles
 import '../styles/about.css';
 import '../styles/contact.css'
+import '../styles/commonStyles.css'
 import { Prompt, Raleway } from 'next/font/google';
 import ContactForm from '../components/contactForm';
 
@@ -27,7 +28,7 @@ const Contact = () => {
     return (
         <>
             <Navbar />
-            <section className={`aboutUs ${raleway.className} offsetForScrollTop ${prefixClassName}`} id='contact'>
+            <section className={`common-padding aboutUs ${raleway.className} offsetForScrollTop ${prefixClassName}`} id='contact'>
                 <section>
                     <h1>CONTACT US</h1>
                     <span className='h1Border'></span>
@@ -39,7 +40,7 @@ const Contact = () => {
                 {/* <span className='sideMsg'>YOUR TRUSTED LOGISTICS PARTNER</span> */}
             </section>
             <section className={`contactFormSection ${prompt.className} ${backgroundForContactFormSection}`}>
-                <secton className='contactInfo'>
+                <secton className='common-padding-left contactInfo'>
                     <section className='contactInfoBlock office'>
                         <span className='contactInfoBlockName'>Office</span>
                         <span className='contactInfoBlockDesc'>
@@ -61,7 +62,7 @@ const Contact = () => {
                         </span>
                     </section>
                 </secton>
-                <section className={`formDiv`}> 
+                <section className={`common-padding-right formDiv`}> 
                     <h3>CONTACT FORM</h3>
                     <ContactForm/>
                 </section>

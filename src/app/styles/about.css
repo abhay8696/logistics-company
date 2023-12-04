@@ -130,7 +130,8 @@
     left: 50%;
 }
 .mapImgDiv img{
-    max-height: calc(100vh - 104px);
+    height: calc(100vh - 104px);
+    object-fit: cover;
 }
 @media only screen and (max-width: 900px){
     .about-header-actions{

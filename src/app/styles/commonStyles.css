@@ -1,0 +1,14 @@
+
+
+@media only screen and (min-width: 1450px){
+    .common-padding{
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+    }
+    .common-padding-left{
+        padding-left: 10rem !important;
+    }
+    .common-padding-right{
+        padding-right: 10rem !important;
+    }
+}
